@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Platzi Travel</title>
+</head>
+<body class="font-Montserrat dark:bg-gray-900">
+    <nav class="w-full h-14 hidden bg-white lg:flex px-6 py-4 justify-between fixed z-10 shadow-md dark:bg-gray-800">
+        <div class="h-auto w-auto">
+            <a class="text-secondary text-xl font-extrabold dark:text-gray-300" href="#home">PLZ Travel</a>
+        </div>
+        <div class="flex space-x-8">
+            <a class="text-primary font-semibold text-md dark:text-white" href="#home">Inicio</a>
+            <a class="text-primary font-semibold text-md dark:text-white" href="#recommended">Recomendados</a>
+            <a class="text-primary font-semibold text-md dark:text-white" href="#featured-rents">Rentas</a>
+            <a class="text-primary font-semibold text-md dark:text-white" href="#faqs">FAQs</a>
+            <a class="text-primary font-semibold text-md dark:text-white" href="#about-us">Sobre nosotros</a>
+        </div>
+        <div class="flex space-x-8">
+            <a href="#recommended">
+                <i class="text-primary text-xl fa-solid fa-search dark:text-white"></i>
+            </a>
+            <a class="cursor-pointer" id="toggle">
+                <i class="text-primary text-xl fa-solid fa-moon"></i>
+            </a>
+            <a href="#faqs">
+                <i class="text-gray-200 text-xl fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    <main class="w-full lg:h-screen">
+        <section class="w-full h-3/4" id="home">
+            <div class="w-full h-full relative">
+                <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48">
+                    <input 
+                        class="outline-none p-3 rounded-full drop-shadow-lg text-center transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden" 
+                        placeholder="San Francisco" type="search" name="" id=""/>
+                    <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+                        <p class="text-4xl ml-16 font-bold">Encuentra más ubicaciones como esta...</p>
+                    </div>
+                    <button 
+                    class="bg-white text-sm text-primary font-semibold px-12 py-4 rounded-full transition-all duration-500 
+                            ease-in-out hover:bg-primary hover:text-white hover:-translate-y-1 hover:scale-110
+                            lg:ml-16">
+                            Explorar
+                    </button>
+                </div>
+                <div class="w-full h-full lg:bg-sanFranciscoDesktop bg-cover lg:bg-center">
+                    <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="San Francisco, California">
+                </div>
+            </div>
+        </section>
+        <section class="p-6 lg:scroll-mt-10" id="recommended">
+            <h2 class="text-3xl font-semibold text-primary dark:text-gray-300">Recomendados</h2>
+            <div class="w-auto h-72 items-center mt-6 overflow-x-auto overscroll-x-contain flex space-x-4">
+                <article class="colored-card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover "></div>
+                    <div class="p-3">
+                        <p class="font-bold text-white text-xl">Noruega</p>
+                        <p class="text-white text-xs font-semibold mt-1">Paisajes increíbles</p>
+                    </div>
+                </article>
+                <article class="white-card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-newYork bg-cover "></div>
+                    <div class="p-3">
+                        <p class="font-bold text-terciary dark:text-gray-700 text-xl">New York</p>
+                        <p class="text-terciary dark:text-gray-700 text-xs font-semibold mt-1">Selva de concreto</p>
+                    </div>
+                </article>
+                <article class="colored-card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-yosemite bg-cover "></div>
+                    <div class="p-3">
+                        <p class="font-bold text-white text-xl">Yosemite</p>
+                        <p class="text-white text-xs font-semibold mt-1">Un descanso del mundo</p>
+                    </div>
+                </article>
+                <article class="white-card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-seattle bg-cover "></div>
+                    <div class="p-3">
+                        <p class="font-bold text-terciary dark:text-gray-700 text-xl">Seattle</p>
+                        <p class="text-terciary dark:text-gray-700 text-xs font-semibold mt-1">Gran ciudad</p>
+                    </div>
+                </article>
+                <article class="colored-card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-switzerland bg-cover "></div>
+                    <div class="p-3">
+                        <p class="font-bold text-white text-xl">Suiza</p>
+                        <p class="text-white text-xs font-semibold mt-1">Leche y chocolates</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="px-6 lg:scroll-mt-16" id="featured-rents">
+            <h2 class="text-3xl font-semibold text-primary pb-6 dark:text-gray-300">Rentas destacadas</h2>
+            <article class="w-full h-full space-y-6">
+                <div class="w-full h-96 bg-chicago bg-cover bg-center rounded-xl">
+                    <p class="card-title__featured-rents lg:drop-shadow-md">Chicago</p>
+                    <p class="text-sm pl-8 text-white mr-24 drop-shadow-md lg:text-lg">2 habitaciones, baño y cocina.</p>
+                </div>
+                <div class="lg:flex lg:h-1/3 lg:w-full lg:space-x-4">
+                    <div class="w-full h-96 bg-losAngeles bg-cover bg-center rounded-xl mb-8 lg:h-auto">
+                        <p class="card-title__featured-rents">Los Ángeles</p>
+                        <p class="text-sm pl-8 text-white mr-24 drop-shadow-md lg:text-lg">4 habitaciones, 3 baños, cocina y piscina privada.</p>
+                    </div>
+                    <div class="h-full w-full"> 
+                        <div class="w-full h-96 bg-miami bg-cover bg-center rounded-xl mb-8">
+                            <p class="card-title__featured-rents">Miami</p>
+                            <p class="text-sm pl-8 text-white mr-24 drop-shadow-md lg:text-lg">3 habitaciones, 2 baños, cocina y una espectacular vista al mar.</p>
+                        </div>
+                        <div class="w-full h-96 bg-bali bg-cover bg-center rounded-xl mb-8">
+                            <p class="card-title__featured-rents">Bali</p>
+                            <p class="text-sm pl-8 text-white mr-24 drop-shadow-md lg:text-lg">2 habitaciones, 2 baños, cocina y piscina privada.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="px-6 pt-6 lg:scroll-mt-10" id="faqs">
+            <article class="w-full h-full space-y-4">
+                <h2 class="text-3xl font-semibold text-primary pb-6 dark:text-gray-300">FAQs</h2>
+                <div>
+                    <p class="text-xl text-primary font-semibold dark:text-gray-500">Política de cancelación</p>
+                    <p class="text-md pt-2 dark:text-white">
+                        Para estancias menores a una semana es importante avisar con 3 días de 
+                        anticipación, de caso contario será sancionado.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-xl text-primary font-semibold dark:text-gray-500">Métodos de pago</p>
+                    <p class="text-md pt-2 dark:text-white">
+                        Aceptamos VISA, MasterCard, American Express, Paypal y Binance. 
+                    </p>
+                </div>
+                <div>
+                    <p class="text-xl text-primary font-semibold dark:text-gray-500">Estancias largas</p>
+                    <p class="text-md pt-2 dark:text-white">
+                        Aceptamos VISA, MasterCard, American Express, Paypal y Binance. 
+                        Aceptamos VISA, MasterCard, American Express, Paypal y Binance. 
+                    </p>
+                </div>
+            </article>
+        </section>
+        <footer class="w-full h-auto bg-gray-50 px-6 pb-24 mt-4" id="about-us">
+            <p class="text-lg py-4 font-semibold text-gray-500">Acerca de</p>
+            <ul class="space-y-2">
+                <li class="text-sm text-gray-400 cursor-pointer">Inversionistas</li>
+                <li class="text-sm text-gray-400 cursor-pointer">Empleos</li>
+                <li class="text-sm text-gray-400 cursor-pointer">Política de privacidad</li>
+                <li class="text-sm text-gray-400 cursor-pointer">Términos y condiciones</li>
+                <li class="text-sm text-gray-400 cursor-pointer">Platzi Travel Inc.</li>
+                <li class="text-sm text-gray-400 cursor-pointer">Síguenos</li>
+            </ul>
+        </footer>
+    </main>
+    <div class="w-full h-16 bg-white shadow-md fixed left-0 bottom-0 flex items-center justify-evenly lg:hidden dark:bg-gray-800" id="tab-bar">
+        <a href="#home">
+            <i class="text-gray-200 text-xl fa-solid fa-house dark:text-gray-700"></i>
+        </a>
+        <a href="#recommended">
+            <i class="text-primary  text-xl fa-solid fa-search"></i>
+        </a>
+        <a href="#featured-rents">
+            <i class="text-gray-200 text-xl fa-solid fa-heart dark:text-gray-700"></i>
+        </a>
+        <a href="#faqs">
+            <i class="text-gray-200 text-xl fa-solid fa-user dark:text-gray-700"></i>
+        </a>
+        <a class="cursor-pointer" id="toggle-mobile">
+            <i class="text-gray-200 text-xl fa-solid fa-moon dark:text-gray-700"></i>
+        </a>
+    </div> 
+    <script>
+        const htmlElement = document.querySelector('html');
+        const toggleBtn = document.querySelector('#toggle');
+        const toggleBtnMobile = document.querySelector('#toggle-mobile');
+
+        toggleBtn.addEventListener('click', () => toggleDarkMode())
+        toggleBtnMobile.addEventListener('click', () => toggleDarkMode())
+
+        const toggleDarkMode = () => {
+            htmlElement.classList.contains('dark')
+            ? htmlElement.classList.remove('dark')
+            : htmlElement.classList.add('dark')
+        };
+    </script>
+</body>
+</html>

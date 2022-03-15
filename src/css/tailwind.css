@@ -1,0 +1,16 @@
+@tailwind base; /* Hace referencia a estilos aplicados a elementos HTML */ 
+@tailwind components; /* Hace referencia al manejo de clases */ 
+@tailwind utilities; /* Hace referencia a propiedades referentes a los atributos CSS */
+
+/*@layer sobreescribe o define nuestros propios estilos, componentes o configuraciones para cualquiera de estas 3 categorías. */ 
+@layer components {
+    .colored-card {
+        @apply w-48 h-64 shadow-md rounded-lg bg-secondary flex-none transform transition-all hover:translate-y-4 hover:shadow-xl overflow-y-hidden dark:bg-gray-700;
+    }
+    .white-card {
+        @apply w-48 h-64 shadow-md rounded-lg bg-white flex-none transform transition-all hover:translate-y-4 hover:shadow-xl overflow-y-hidden dark:bg-gray-400;
+    }
+    .card-title__featured-rents {
+        @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white;
+    }
+}
